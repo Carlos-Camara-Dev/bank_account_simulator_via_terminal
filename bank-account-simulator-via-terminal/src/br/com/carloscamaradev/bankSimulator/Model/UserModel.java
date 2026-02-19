@@ -1,12 +1,13 @@
-package main.java.br.com.carloscamaradev.bankSimulator.Model;
-import java.util.Date;
+package br.com.carloscamaradev.bankSimulator.Model;
 
-public class userModel {
+import java.time.LocalDate;
+
+public class UserModel {
     private String name;
-    private Date birthDate;
+    private LocalDate birthDate;
     private String cpf;
     
-    public userModel(String name, Date birthDate, String cpf) {
+    public UserModel(String name, LocalDate birthDate, String cpf) {
         this.setBirthDate(birthDate); 
         this.setCpf(cpf);
         this.setName(name);
@@ -20,11 +21,11 @@ public class userModel {
         this.name = name;
     }
 
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    private void setBirthDate(Date birthDate) {
+    private void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 

@@ -1,25 +1,29 @@
-package main.java.br.com.carloscamaradev.bankSimulator.Model;
+package br.com.carloscamaradev.bankSimulator.Model;
 
-public class bankModel {
-    private String bankName;
+public class BankModel {
+    private UserModel holder;
     private String agencyNumber;
     private String accountNumber;
     private double balance;
 
-    public bankModel(String bankName, String agencyNumber, String accountNumber) {
-        this.setBankName(bankName);
+
+    public BankModel(){
+        
+    }
+    public BankModel(UserModel holder, String agencyNumber, String accountNumber) {
+        this.setHolder(holder);
         this.setAgencyNumber(agencyNumber); 
         this.setAccountNumber(accountNumber);
         this.setBalance(0.0);   
         
     }
 
-    public String getBankName() {
-        return bankName;
+    public UserModel getHolder() {
+        return holder;
     }
 
-    private void setBankName(String bankName) {
-        this.bankName = bankName;
+    private void setHolder(UserModel holder) {
+        this.holder = holder;
     }
 
     public String getAgencyNumber() {
@@ -41,7 +45,9 @@ public class bankModel {
     public double getBalance() {
         return balance;
     }
-    private void setBalance(double balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
+
+
 }
