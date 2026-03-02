@@ -6,7 +6,6 @@ public class BankModel {
     private String accountNumber;
     private double balance;
 
-
     public BankModel(){
         
     }
