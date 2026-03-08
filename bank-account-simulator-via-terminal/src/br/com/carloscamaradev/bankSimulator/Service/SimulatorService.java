@@ -10,6 +10,9 @@ import br.com.carloscamaradev.bankSimulator.Repository.SimuladorRepoository;
 public class SimulatorService implements SimuladorRepoository{
      private Scanner enty = new Scanner(System.in);
 
+    public SimulatorService(){
+        createSimulador();
+    }
     @Override
     public void createSimulador() {
         System.out.println("Bem-vindo ao nosso Simulador de Banco!");
@@ -46,14 +49,21 @@ public class SimulatorService implements SimuladorRepoository{
         String date = enty.next();
         int[] intDate = formatDate(date);
         UserModel user = new UserModel(name, LocalDate.of(intDate[2], intDate[1], intDate[0]), cpf);
-
         System.out.println("Usuario cadastrado no sistema!");
 
     }
 
     @Override
     public void cadastBankUser() {
-        
+        System.out.println("Digite o CPF do Usuario.");
+        String cpf = enty.next();
+        System.out.println("Digite o nome do Usuario.");
+        String name = enty.next();
+        System.out.println("Digite a data de nascimento (1999/09/19).");
+        String date = enty.next();
+        int[] intDate = formatDate(date);
+        UserModel user = new UserModel(name, LocalDate.of(intDate[2], intDate[1], intDate[0]), cpf);
+        System.out.println("Usuario cadastrado no sistema!");
     }
 
     @Override

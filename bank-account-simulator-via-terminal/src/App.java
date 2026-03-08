@@ -19,7 +19,6 @@ public class App {
         // bankSe.deposit(bank);
         // bankSe.withdraw(bank, 300);
         SimulatorService sS = new SimulatorService();
-        sS.createSimulador();
     
         
 
