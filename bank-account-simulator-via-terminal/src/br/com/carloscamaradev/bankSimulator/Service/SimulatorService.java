@@ -2,9 +2,7 @@ package br.com.carloscamaradev.bankSimulator.Service;
 
 import java.time.LocalDate;
 import java.util.Scanner;
-
-import br.com.carloscamaradev.bankSimulator.Model.SimulatorModel;
-import br.com.carloscamaradev.bankSimulator.Model.UserModel;
+import br.com.carloscamaradev.bankSimulator.Model.PersonModel;
 import br.com.carloscamaradev.bankSimulator.Repository.SimuladorRepoository;
 
 public class SimulatorService implements SimuladorRepoository{
@@ -48,7 +46,7 @@ public class SimulatorService implements SimuladorRepoository{
         System.out.println("Digite a data de nascimento (1999/09/19).");
         String date = enty.next();
         int[] intDate = formatDate(date);
-        UserModel user = new UserModel(name, LocalDate.of(intDate[2], intDate[1], intDate[0]), cpf);
+        PersonModel user = new PersonModel(name, LocalDate.of(intDate[2], intDate[1], intDate[0]), cpf);
         System.out.println("Usuario cadastrado no sistema!");
 
     }
@@ -62,7 +60,7 @@ public class SimulatorService implements SimuladorRepoository{
         System.out.println("Digite a data de nascimento (1999/09/19).");
         String date = enty.next();
         int[] intDate = formatDate(date);
-        UserModel user = new UserModel(name, LocalDate.of(intDate[2], intDate[1], intDate[0]), cpf);
+        PersonModel user = new PersonModel(name, LocalDate.of(intDate[2], intDate[1], intDate[0]), cpf);
         System.out.println("Usuario cadastrado no sistema!");
     }
 
@@ -82,7 +80,7 @@ public class SimulatorService implements SimuladorRepoository{
             System.out.println("Erro: Data nao inserida!");
         }
         else{
-            date.trim();
+            date = date.trim();
             if (date.matches("\\d+")) {
                 String[] date_s = date.split("/");
                 int[] intFormatDate = new int[3];

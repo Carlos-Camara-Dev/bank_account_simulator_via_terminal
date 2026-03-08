@@ -2,12 +2,12 @@ package br.com.carloscamaradev.bankSimulator.Model;
 
 import java.time.LocalDate;
 
-public class UserModel {
+public class PersonModel {
     private String name;
     private LocalDate birthDate;
     private String cpf;
     
-    public UserModel(String name, LocalDate birthDate, String cpf) {
+    public PersonModel(String name, LocalDate birthDate, String cpf) {
         this.setBirthDate(birthDate); 
         this.setCpf(cpf);
         this.setName(name);

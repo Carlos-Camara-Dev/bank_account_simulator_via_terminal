@@ -9,7 +9,7 @@ public class BankModel {
     public BankModel(){
         
     }
-    public BankModel(UserModel holder, String agencyNumber, String accountNumber) {
+    public BankModel(PersonModel holder, String agencyNumber, String accountNumber) {
         this.setHolder(holder);
         this.setAgencyNumber(agencyNumber); 
         this.setAccountNumber(accountNumber);
@@ -17,11 +17,11 @@ public class BankModel {
         
     }
 
-    public UserModel getHolder() {
+    public PersonModel getHolder() {
         return holder;
     }
 
-    private void setHolder(UserModel holder) {
+    private void setHolder(PersonModel holder) {
         this.holder = holder;
     }
 

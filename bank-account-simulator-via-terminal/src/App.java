@@ -1,8 +1,4 @@
-import java.time.LocalDate;
 
-import br.com.carloscamaradev.bankSimulator.Model.BankModel;
-import br.com.carloscamaradev.bankSimulator.Model.UserModel;
-import br.com.carloscamaradev.bankSimulator.Service.BankService;
 import br.com.carloscamaradev.bankSimulator.Service.SimulatorService;
 
 public class App {

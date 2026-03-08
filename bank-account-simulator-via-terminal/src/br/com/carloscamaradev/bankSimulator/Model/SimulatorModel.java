@@ -2,11 +2,11 @@ package br.com.carloscamaradev.bankSimulator.Model;
 
 public class SimulatorModel {
     private BankModel bank;
-    private UserModel user;
+    private PersonModel person;
 
-    public SimulatorModel(BankModel bank, UserModel user) {
+    public SimulatorModel(BankModel bank, PersonModel person) {
         this.setBank(bank);
-        this.setUser(user);
+        this.setPerson(person);
     }
 
     public BankModel getBank() {
@@ -17,12 +17,12 @@ public class SimulatorModel {
         this.bank = bank;
     }
 
-    public UserModel getUser() {
-        return user;
+    public PersonModel getPerson() {
+        return person;
     }
 
-    public void setUser(UserModel user) {
-        this.user = user;
+    public void setPerson(PersonModel person) {
+        this.person = person;
     }
 
 }
